@@ -1,4 +1,8 @@
-## Welcome to GitHub Pages
+## Krzysztof Leśniewski
+
+Strona domowa
+
+Dydaktyka
 
 You can use the [editor on GitHub](https://github.com/krzlesn/lesniewskik/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
 
