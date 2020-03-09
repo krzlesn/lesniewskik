@@ -1,0 +1,33 @@
+:root {
+
+  --main-txt-color: #62CADF ;  
+  --main-padding: 15px;  
+}
+a {text-decoration: none;} 
+a { color: inherit; } 
+body {
+  background-color: #292821;
+  a { color: inherit; } 
+}
+
+h1 {
+  color: #F8F8F2;
+  margin-left: 20px;
+  a { color: inherit; } 
+}
+p {
+  color: #F8F8F2;
+  font-family: verdana;
+  font-size: 20px;
+}
+#div1 {
+  background-color: var(--main-bg-color);
+  color: var(--main-txt-color);  
+  padding: var(--main-padding);
+}
+#div2 {
+  background-color: var(--main-bg-color);
+  color: #E8246B;  
+  padding: var(--main-padding);
+}
+a { color: inherit; } 
