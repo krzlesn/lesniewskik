@@ -1,9 +1,13 @@
 <!DOCTYPE html>
 <head>
    <link rel="stylesheet" type="text/css" href="main.css">
-
 </style>
-
+<script>
+    function setStyleSheet(url){
+       var stylesheet = document.getElementById("stylesheet");
+       stylesheet.setAttribute('href', url);
+    }
+    </script>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width">
@@ -17,8 +21,8 @@
   <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 </head>
 <body>
-  <link rel="stylesheet" href="white.css" id="theme">
-<button id="switch">Switch Theme</button>
+  <a href="#" onclick="changeCSS('main.css', 0);">STYLE 1</a> 
+        <a href="#" onclick="changeCSS('white.css', 0);">STYLE 2</a>
     <h1>Difference and Differential equations- tutorials </h1>
 
 <p> 
