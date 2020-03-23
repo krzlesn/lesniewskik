@@ -51,9 +51,63 @@
 <div id="div1"> #5 Semi-exact diff. equation, n-th order diff. eq. </div>
  </h1>
  <p>
-The differential equation of the \(n\)-th order</span> in the general case has the form:</p>
+The differential equation of the \(n\)-th order</span> in the general case has the form:
+\[{F\left( {x,y,y&#8217;,y^{\prime\prime}, \ldots ,{y^{\left( n \right)}}} \right) }={ 0,}\]
+Below we will consider two cases (for more see  <a href="https://www.math24.net/reduction-order/">here</a>.)
+If our differential equation is independent of $y$, then by 
+then by replacing</p>
+
+
+
+<p class="mathjax_equation">\[{y^{\left( k \right)}} = p\left( x \right)\]</p>
+
+
+
+<p class="text_block">the order of this equation is reduced by \(k\) units. As a result, the original equation takes the form</p>
+
+
+
+<p class="mathjax_equation">\[F\left( {x,p,p&#8217;, \ldots {p^{\left( {n &#8211; k} \right)}}} \right) = 0.\]</p>
+
 
  </p>
+ <p> <font color="#00bfff"> Example</font> Solve the equation \(y^{\prime\prime} = \sin x + \cos x.\)
+   <p>
+    <div><button title="Click to show/hide content" type="button" onclick="if(document.getElementById('spoiler8') .style.display=='none') {document.getElementById('spoiler8') .style.display=''}else{document.getElementById('spoiler8') .style.display='none'}">Solution</p>
+<div id="spoiler8" style="display: none;">
+<p> 
+Consider the function \(y&#8217; = p\left( x \right).\) Then \(y^{\prime\prime} = p&#8217;.\) Consequently,
+
+
+
+\[p&#8217; = \sin x + \cos x.\]
+
+
+
+Integrating, we find the function \(p\left( x \right):\)
+
+
+
+<p class="mathjax_equation">\[<br> {\frac{{dp}}{{dx}} = \sin x + \cos x,\;\;}\Rightarrow <br> {dp = \left( {\sin x + \cos x} \right)dx,\;\;}\Rightarrow<br> {{\int {dp}  }={ \int {\left( {\sin x + \cos x} \right)dx} ,\;\;}}\Rightarrow<br> {{p =  &#8211; \cos x }+{ \sin x + {C_1}.}}<br>\]</p>
+
+
+
+<p class="text_block">Given that \(y&#8217; = p,\) we integrate one more equation of the \(1\)st order:</p>
+
+
+
+<p class="mathjax_equation">\[<br> {{y&#8217; =  &#8211; \cos x }+{ \sin x + {C_1},\;\;}}\Rightarrow<br> {{\int {dy}  }={ \int {\left( { &#8211; \cos x + \sin x + {C_1}} \right)dx} ,\;\;}}\Rightarrow<br> {{y =  &#8211; \sin x }-{ \cos x + {C_1}x + {C_2}.}}<br>\]</p>
+
+
+
+<p class="text_block">The latter formula gives the general solution of the original differential equation.</p> </p>
+</div> </p></button> </div>
+ 
+
+
+
+
+
  <hr>
 <h1>
 <div id="div1"> #4 Exact diff. equation. </div>
