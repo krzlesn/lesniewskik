@@ -47,8 +47,71 @@
   [2]. Online course: https://versal.com/learn/aoz8qv/lessons/1. <br>
   [3]. Ordinary Differential equations, Gabriel  Nagy, Mathematics Departmen, Michigan State University, lecture notes.
   <hr>
+    <h1>
+<div id="div1"> #7 linear differential equation, $y''+a_1(x) y'+ a_2 (x) y=f(x).$</div>
+ </h1>
+ <p>
+ For n-th order linear differential equation with constant coefficients we will use the same idea as previous. We will plug function $y(x)=e^{\lambda x}$ into diff. eq. : 
+ <center><p>$a_n y^{(n)} + a_{n-1}y^{(n-1)} + \ldots +a_1 y'+ a_0 y =0$</p></center>
+ <p>and then, using roots of characteristic eq., we will generate n lineary independent solutions.
+ </p>
+ <u><p>Example. </u> <p>Solve the differential equations: 
+ <ol>
+  <p><li>
+    <p>$y^{(3)}-2y''+2y'=0.$
+  </li>
+  <li>
+    <p>$y^{(3)}-2y''+y'=0.$</p>
+  </li>
+ </ol>
+
+ <p> <div><button title="Click to show/hide content" type="button" onclick="if(document.getElementById('spoiler71') .style.display=='none') {document.getElementById('spoiler71') .style.display=''}else{document.getElementById('spoiler71') .style.display='none'}">Show/hide solved Example  </p>
+<div id="spoiler71" style="display: none;">
+<p> <img src="rozw/7-tutorials-1.png" alt="ex"> </p>
+</div> </p></button> </div> </p>
+
+<p>
+
+  <center> <p>Non-homogeneous case.</center>
+<p>Let us denote $L(y)=y''+a_1(x) y'+ a_2 (x) y.$ <br>
+
+Let us also assume that $y_1$, $y_1$ are fundamental solutions of the equation $L(y)=0$. <br>
+For finding general solution of non-homogeneous diff. eq. i.e.
+<u><p>$L(y)=f(x)$</p>
+  </u>
+<p>we will use the formula:
+ <p>$y(x)=y_p(x)+y_0(x)$,</p>
+  <p>where $y_p$ is a particular solution of $L(y)=f(x)$ and $y_0$ is a general solution of homogeneous diff. eq. $L(y)=0.$ <br>
+  Hence, we already know how to solve homogeneous part, it is enough to learn how to find particular solutions. We will work with two methods. The first one is the method of variational parameters, the second is the method of undetermined coefficients. </p>
+<br>
+<p>
+  
+<u>Variational of parameters method</u> <br>
+
+Our main problem is to find particular solution of <br>
+<center><p>$y''+a_1(x) y'+ a_2 (x) y=f(x).$</p></center>
+<p> 
+  <u>Note:</u> If $y_1, y_2$ are fundamental solutions ($L(y_1)=0, L(y_2)=0$ and $y_1, y_2$ are lineary independent), then 
+  <u>
+    <p><center>
+     <p>$ y_p(x)=c_1(x) y_1(x)+ c_2(x) y_2(x)$,</p></center>
+    </p>
+  </u>
+</p>
+<p>
+  where $c_1, c_2$ are functions satysfying 
+ $  \begin{bmatrix} y_1 & y_2 \\ y_1' & y_2' \end{bmatrix}  \left[ \begin{array}{c} c_1' \\ c_2' \end{array} \right]=\left[ \begin{array}{c} 0 \\ f(x) \end{array} \right] $ <br>
+ Here, you can see the proof of the above fact (sorry for denoting argument as $t$ not $x$.)
+
+ <p> <div><button title="Click to show/hide content" type="button" onclick="if(document.getElementById('spoiler72') .style.display=='none') {document.getElementById('spoiler72') .style.display=''}else{document.getElementById('spoiler72') .style.display='none'}">Show/hide proof  </p>
+<div id="spoiler72" style="display: none;">
+<p> <img src="rozw/7-tutorials-2.png" alt="ex"> </p>
+</div> </p></button> </div> </p>
+</p>
+
+ <hr>
   <h1>
-<div id="div1"> #6 Second order linear differential equation. </div>
+<div id="div1"> #6 Second order linear differential equation. $y''+a_1(x) y'+ a_2 (x) y=0.$</div>
  </h1>
  <p>
   For notation see prof. Fryszkowski lectures.<br>
