@@ -1,22 +1,25 @@
 :root {
 
-  --main-txt-color: #62CADF ;  
+  --main-txt-color: #333 ;  
   --main-padding: 15px;  
+  --main-bg-color: #AEDDFF;
+  --main-bg-color2: #AE2DFF;
+  --mojkolor1: #333;
 }
 a {text-decoration: none;} 
 a { color: inherit; } 
 body {
-  background-color: #292821;
+  background-color: #EAEAEA;
   a { color: inherit; } 
 }
 
 h1 {
-  color: #F8F8F2;
+  color: #333;
   margin-left: 20px;
-  a { color: inherit; } 
+  a { color: #F8F8F2; } 
 }
 p {
-  color: #F8F8F2;
+  color: #333;
   font-family: verdana;
   font-size: 20px;
 }
@@ -29,5 +32,13 @@ p {
   background-color: var(--main-bg-color);
   color: #E8246B;  
   padding: var(--main-padding);
+}
+#div3 {
+  background-color: var(--main-bg-color2);
+  padding: 5px;
+}
+#div4 {
+  background-color: var(--mojkolor1);
+  padding: 5px;
 }
 a { color: inherit; } 
