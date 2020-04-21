@@ -73,38 +73,7 @@ function myFunction() {
  In this section we will deal with the case when, $f(x)\neq 0. $ 
  Let us recall that we know the solution for homogeneous case i.e. 
  $y_0(x)= c_1 y_1 (x) + y_2 (x) c_2$.
-
-
- </p>
- 
- <hr>
-
-    <h1>
-<div id="div1"> #7 linear differential equation, $y''+a_1(x) y'+ a_2 (x) y=f(x).$</div>
- </h1>
- <p>
- For n-th order linear differential equation with constant coefficients we will use the same idea as previous. We will plug function $y(x)=e^{\lambda x}$ into diff. eq. : 
- <center><p>$a_n y^{(n)} + a_{n-1}y^{(n-1)} + \ldots +a_1 y'+ a_0 y =0$</p></center>
- <p>and then, using roots of characteristic eq., we will generate n lineary independent solutions.
- </p>
- <u><p>Example. </u> <p>Solve the differential equations: 
- <ol>
-  <p><li>
-    <p>$y^{(3)}-2y''+2y'=0.$
-  </li>
-  <li>
-    <p>$y^{(3)}-2y''+y'=0.$</p>
-  </li>
- </ol>
-
- <p> <div><button title="Click to show/hide content" type="button" onclick="if(document.getElementById('spoiler71') .style.display=='none') {document.getElementById('spoiler71') .style.display=''}else{document.getElementById('spoiler71') .style.display='none'}">Show/hide solved Example  </p>
-<div id="spoiler71" style="display: none;">
-<p> <img src="rozw/7-tutorials-1.png" alt="ex"> </p>
-</div> </p></button> </div> </p>
-
-<p>
-
-  <center> <p>Non-homogeneous case.</center>
+ <center> <p>Non-homogeneous case.</center>
 <p>Let us denote $L(y)=y''+a_1(x) y'+ a_2 (x) y.$ <br>
 
 Let us also assume that $y_1$, $y_1$ are fundamental solutions of the equation $L(y)=0$. <br>
@@ -140,7 +109,48 @@ Our main problem is to find particular solution of <br>
 <p> <img src="rozw/7-tutorials-2.png" alt="ex"> </p>
 </div> </p></button> </div> </p>
 </p>
+<u><p>Example.</u> Solve $y''-2y'+y= \frac{e^x}{x^2+1}.$ <br>
 
+Solution: <br>
+In the first step we will solve the homogeneous part:
+<img src="rozw/7-tutorials-3.png" alt="ex">
+<br>
+In the second part we will use <u>variation  of parameters method  </u> for finding a particular solution.
+<br>
+<img src="rozw/7-tutorials-4.png" alt="ex"> <br>
+Such systems we can solve using Cramer's rule: <br>
+<img src="rozw/7-tutorials-5.png" alt="ex">
+
+ </p>
+ 
+ <hr>
+
+    <h1>
+<div id="div1"> #7 linear differential equation, $y''+a_1(x) y'+ a_2 (x) y=f(x).$</div>
+ </h1>
+ <p>
+ For n-th order linear differential equation with constant coefficients we will use the same idea as previous. We will plug function $y(x)=e^{\lambda x}$ into diff. eq. : 
+ <center><p>$a_n y^{(n)} + a_{n-1}y^{(n-1)} + \ldots +a_1 y'+ a_0 y =0$</p></center>
+ <p>and then, using roots of characteristic eq., we will generate n lineary independent solutions.
+ </p>
+ <u><p>Example. </u> <p>Solve the differential equations: 
+ <ol>
+  <p><li>
+    <p>$y^{(3)}-2y''+2y'=0.$
+  </li>
+  <li>
+    <p>$y^{(3)}-2y''+y'=0.$</p>
+  </li>
+ </ol>
+
+ <p> <div><button title="Click to show/hide content" type="button" onclick="if(document.getElementById('spoiler71') .style.display=='none') {document.getElementById('spoiler71') .style.display=''}else{document.getElementById('spoiler71') .style.display='none'}">Show/hide solved Example  </p>
+<div id="spoiler71" style="display: none;">
+<p> <img src="rozw/7-tutorials-1.png" alt="ex"> </p>
+</div> </p></button> </div> </p>
+
+<p>
+
+ 
  <hr>
   <h1>
 <div id="div1"> #6 Second order linear differential equation. $y''+a_1(x) y'+ a_2 (x) y=0.$</div>
