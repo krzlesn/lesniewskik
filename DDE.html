@@ -61,11 +61,103 @@ function myFunction() {
     Advanced  Engineering Mathematics International Student Edition By Peter V. O’Neil <br>
   [2]. Online course: https://versal.com/learn/aoz8qv/lessons/1. <br>
   [3]. Ordinary Differential equations, Gabriel  Nagy, Mathematics Departmen, Michigan State University, lecture notes.
-  <hr>
+ <hr>
 
       <h1>
-<div id="div1"> #9 linear differential, undetermined coefficients method</div>
+<div id="div3">An Example of #I TEST:</div>
  </h1>
+ <p>
+   Solve the following problems by finding function $y$. <br>
+
+    1. $xy'=y\left(\ln \frac{y}{x}+1\right), y(1)=e.$ <br>
+    2. $xy'-y^2\ln x+y=0, y(e)=1.$ <br>
+   3. $(x^2+xy)y'+(3xy+y^2)=0.$ <br>
+   4. $y'=\frac{x^2+3y^2}{2xy}.$ <br>
+  5. $xy'+y=x\sqrt{x},\ \  y(1)=2.$ <br>
+Dear students, if you want to examine your knowledge you can send me pictures of your solutions. <br>
+I will uploud solutions in some time.
+
+ </p>
+ 
+   <hr>
+
+      <h1>
+<div id="div3">An Example of #II TEST:</div>
+ </h1>
+  <hr>
+
+
+  <p> 1.  $y''+y'=e^{-x}+5x+2,$ <br>
+  2.  $y''+y=\frac{1}{\sqrt{cos(2x)}},$ <br>
+  3.  $y''-\frac 3 x y'+ \frac{4}{x^2}y=5,$ <br>
+ 4.  $\begin{cases}
+ x'(t)=x-y+cost \\
+ y'(t)=x-2y+sint.
+  \end{cases}$ <br>
+5.  $x(3xy-2) dx + (x^3+2y)dy=0.$
+</p>
+<hr>
+      <h1>
+<div id="div1"> #9 linear differential, undetermined coefficients method</div>
+
+ </h1>
+
+<p>One more time we are dealing with the second order differential equation with constant coefficients i.e. <br>
+  $y''+a_1 y'+ a_2  y=f(x)\ \   {\color{green}(*) }$<br>
+In this section we are focusing on the Undetermined coefficients  method for finding particular solution. <br> <br>
+We will consider the following three cases. To  be more fun in each  case we have another 3 cases.                 <img src="rozw/9-tutorials-1.png" alt="ex" width="20%"> <br> <br>
+
+<font color="blue"> 1 case: $f(x)= b_k x^k + b_{k-1} x^{k-1}+ \ldots b_1 x + b_0.$ </font> <br>
+ 
+
+Let us assume that $p(\lambda)$ is a characteristic equation of eq. ${\color{green}(*) }$. <br>
+
+
+1 case. <br>
+If $0$ is a root of characteristic eq. i.e. $p(0)=0,$ then <br>
+$y_p(x)=  c_k x^k + c_{k-1} x^{k-1}+ \ldots c_1 x + c_0.$ <br>
+
+It means that particular solution of eq. ${\color{green}(*) }$ is of the same form as $ f(x).$ We just need to find coefficients $c_i$ for $i=0,1,\ldots, k$. <br>
+
+2 case. <br>
+If $0$ is a <font color="green"> single </font>root of characteristic eq. i.e. $p(0)=0,$ then <br>
+$y_p(x)= {\color{green} x}  (c_k x^k + c_{k-1} x^{k-1}+ \ldots c_1 x + c_0).$ <br>
+
+3 case. <br>
+If $0$ is a <font color="green"> double </font>root of characteristic eq. i.e. $p(0)=0,$ then <br>
+$y_p(x)= {\color{green} x^2}  (c_k x^k + c_{k-1} x^{k-1}+ \ldots c_1 x + c_0).$ <br>
+
+
+
+<font color="blue"> 2 case: $f(x)= (b_k x^k + b_{k-1} x^{k-1}+ \ldots b_1 x + b_0) {\color{green} e^{\alpha x}}.$ </font> <br>
+ 
+ 
+Let us assume that $p(\lambda)$ is a characteristic equation of eq. ${\color{green}(*) }$. <br>
+
+1 case. <br>
+If ${\color{green} \alpha }$ is a root of characteristic eq. i.e. $p(\alpha)=0,$ then <br>
+$y_p(x)=  (c_k x^k + c_{k-1} x^{k-1}+ \ldots c_1 x + c_0 )e^{\alpha x}.$ <br>
+
+It means that particular solution of eq. ${\color{green}(*) }$ is of the same form as $ f(x).$ We just need to find coefficients $c_i$ for $i=0,1,\ldots, k$. <br>
+
+2 case. <br>
+If ${\color{green} \alpha }$ is a <font color="green"> single </font>root of characteristic eq. then <br>
+$y_p(x)= {\color{green} x}  (c_k x^k + c_{k-1} x^{k-1}+ \ldots c_1 x + c_0) e^{\alpha x}.$ <br>
+
+3 case. <br>
+If ${\color{green} \alpha }$ is a <font color="green"> double </font>root of characteristic  then <br>
+$y_p(x)= {\color{green} x^2}  (c_k x^k + c_{k-1} x^{k-1}+ \ldots c_1 x + c_0)e^{\alpha x}.$ <br>
+
+
+
+
+
+
+
+
+
+</p>
+
   <hr>
 
       <h1>
@@ -123,7 +215,7 @@ In the first step we will solve the homogeneous part: <br>
 In the second part we will use <u>variation  of parameters method  </u> for finding a particular solution.
 <br>
 <img src="rozw/7-tutorials-4.png" alt="ex"> <br>
-Such systems we can solve using Cramer's rule: <br>
+We can solve such system using Cramer's rule: <br>
 <img src="rozw/7-tutorials-5.png" alt="ex">
 
 <u><p>Example (Homework): </p></u> <p> Solve: $xy''-(x+1)y'+y=x^2$ for given fundamental solutions $y_1(x)=e^x, y_2(x)=x+1.$
