@@ -3,7 +3,7 @@
   --main-txt-color: #333 ;  
   --main-padding: 15px;  
   --main-bg-color: #AEDDFF;
-  --main-bg-color2: #AE2DFF;
+  --main-bg-color2: #383152;
   --mojkolor1: #333;
 }
 a {text-decoration: none;} 
@@ -35,6 +35,7 @@ p {
 }
 #div3 {
   background-color: var(--main-bg-color2);
+   color: #e0d8d1;
   padding: 5px;
 }
 #div4 {
