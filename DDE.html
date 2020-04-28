@@ -33,7 +33,7 @@
 <div> </div>
   
 <center> </center>
-  <p style="margin-left: 2.5em;padding: 0 7em 2em 0;border-width: 2px; border-color: black; border-style:solid;">    <font color="#00bfff"> rules: </font> : see prof. Fryszkowski instructions <!--first two during 5th and 10th tutorials (10:15), and the last one during the last lecture (8:15). </font> <br><br>
+  <p style="margin-left: 2.5em;padding: 0 7em 2em 0;border-width: 2px; border-color: black; border-style:solid;">    <font color="blue"> rules: </font> : see prof. Fryszkowski instructions <!--first two during 5th and 10th tutorials (10:15), and the last one during the last lecture (8:15). </font> <br><br>
   Let $X \in [0,50]$ be a number of your points. <br><br>
   $X=A+B$, where $A \in [0,3\cdot 15]=[0,45]$ is taken from tests, and $B\in [0,5+\varepsilon_X]$ is a number of activity points (for some $\varepsilon_X >0$). <br><br>
   <font color="#00bfff"> If $2 \cdot X \ge 71$ you don't need to write an exam. </font> <br><br></center>
@@ -42,7 +42,7 @@
     </p>
  
   
-  <p style="margin-left: 2.5em;padding: 0 7em 2em 0;border-width: 2px; border-color: black; border-style:solid;">    <font color="#00bfff"> Literature: </font>[1]. 
+  <p style="margin-left: 2.5em;padding: 0 7em 2em 0;border-width: 2px; border-color: black; border-style:solid;">    <font color="blue"> Literature: </font>[1]. 
     Prof. Fryszkowski Leture notes from Microsoft Teams: 
     <button onclick="myFunction()">Click me</button>
 
@@ -107,11 +107,11 @@ I will uploud solutions in some time.
  </h1>
 
 <p>One more time we are dealing with the second order differential equation with constant coefficients i.e. <br>
-  $y''+a_1 y'+ a_2  y=f(x)\ \   {\color{green}(*) }$<br>
-In this section we are focusing on the Undetermined coefficients  method for finding particular solution. <br> <br>
+  $y''+a_1 y'+ a_2  y=r(x)\ \   {\color{green}(*) }$<br>
+In this section we are focusing on the Undetermined Coefficients  Method for finding a particular solution. <br> <br>
 We will consider the following three cases. To  be more fun in each  case we have another cases.                 <img src="rozw/9-tutorials-1.png" alt="ex" width="20%"> <br> <br>
 
-<font color="blue"> 1 case: $f(x)= b_k x^k + b_{k-1} x^{k-1}+ \ldots b_1 x + b_0.$ </font> <br>
+<font color="blue"> 1 case: $r(x)= b_k x^k + b_{k-1} x^{k-1}+ \ldots b_1 x + b_0.$ </font> <br>
  
 
 Let us assume that $p(\lambda)$ is a characteristic equation of eq. ${\color{green}(*) }$. <br>
@@ -121,7 +121,7 @@ Let us assume that $p(\lambda)$ is a characteristic equation of eq. ${\color{gre
 If $0$ is a root of characteristic eq. i.e. $p(0)=0,$ then <br>
 $y_p(x)=  c_k x^k + c_{k-1} x^{k-1}+ \ldots c_1 x + c_0.$ <br>
 
-It means that particular solution of eq. ${\color{green}(*) }$ is of the same form as $ f(x).$ We just need to find coefficients $c_i$ for $i=0,1,\ldots, k$. <br>
+It means that particular solution of eq. ${\color{green}(*) }$ is of the same form as $ r(x).$ We just need to find coefficients $c_i$ for $i=0,1,\ldots, k$. <br>
 
 2 case. <br>
 If $0$ is a <font color="green"> single </font>root of characteristic eq. i.e. $p(0)=0,$ then <br>
@@ -133,7 +133,7 @@ $y_p(x)= {\color{green} x^2}  (c_k x^k + c_{k-1} x^{k-1}+ \ldots c_1 x + c_0).$ 
 
 
 
-<font color="blue"> 2 case: $f(x)= (b_k x^k + b_{k-1} x^{k-1}+ \ldots b_1 x + b_0) {\color{green} e^{\alpha x}}.$ </font> <br>
+<font color="blue"> 2 case: $r(x)= (b_k x^k + b_{k-1} x^{k-1}+ \ldots b_1 x + b_0) {\color{green} e^{\alpha x}}.$ </font> <br>
  
  
 Let us assume that $p(\lambda)$ is a characteristic equation of eq. ${\color{green}(*) }$. <br>
@@ -142,7 +142,7 @@ Let us assume that $p(\lambda)$ is a characteristic equation of eq. ${\color{gre
 If ${\color{green} \alpha }$ is a root of characteristic eq. i.e. $p(\alpha)=0,$ then <br>
 $y_p(x)=  (c_k x^k + c_{k-1} x^{k-1}+ \ldots c_1 x + c_0 )e^{\alpha x}.$ <br>
 
-It means that particular solution of eq. ${\color{green}(*) }$ is of the same form as $ f(x).$ We just need to find coefficients $c_i$ for $i=0,1,\ldots, k$. <br>
+It means that particular solution of eq. ${\color{green}(*) }$ is of the same form as $ r(x).$ We just need to find coefficients $c_i$ for $i=0,1,\ldots, k$. <br>
 
 2 case. <br>
 If ${\color{green} \alpha }$ is a <font color="green"> single </font>root of characteristic eq. then <br>
@@ -157,7 +157,7 @@ $y_p(x)= {\color{green} x^2}  (c_k x^k + c_{k-1} x^{k-1}+ \ldots c_1 x + c_0)e^{
 
 
 
-<font color="blue"> 3 case: $f(x)= (A \cos \beta x + B \sin \beta x) e^{\alpha x}$ </font> <br>
+<font color="blue"> 3 case: $r(x)= (A \cos \beta x + B \sin \beta x) e^{\alpha x}$ </font> <br>
  
  
 Let us assume that $\alpha + i \beta$ is a root of characteristic equation of eq. ${\color{green}(*) }$ (in this particular case characteristic equation has two distinct complex roots, $\Delta < 0$ for $p(\lambda)=0$).  <br>
@@ -172,20 +172,34 @@ If ${\color{green} \alpha + i \beta }$  ${\color{green} is}$ a root of character
 $y_p(x)=  (c_k x^k + c_{k-1} x^{k-1}+ \ldots c_1 x + c_0 )e^{\alpha x}.$ <br>
 
 
-
+<u>Note: </u> We can use the method of undetermined coefficients for 
+$r(x)=[w(x) \sin (\cos (\beta x) ) + v(x) \sin (\beta x)] e^{\alpha x }$, where $v$ and $w$ are polynomials.
 
 </p>
+<p>
 
+Now we are ready for some examples. <br>
+
+
+<u>Example. </u> Solve $y''+y=x+1$. <br>
+As previous we are starting with hom. diff. equation. <br>
+<img src="rozw/8-tutorials-3.png" alt="ex" width="60%"> <br>
+For the second part we will use the method of undetermined coefficients. As you observed the form of particular solution depends on the "special" number taken from $r(x)=[w(x) \sin (\cos \beta x ) + v(x) \sin( \beta x)] e^{\alpha x }$. Let us denote this number as $\bar{\lambda}:= \alpha+ i\beta.$  
+If $\bar{\lambda}$ is not a root of characteristic equation, then particular solution has the same form as $r(x)$. If $\bar{\lambda}$ is a root of characteristic equation, then we need to multiply particular solution by $x^m$, where $m$ a multiplicity of $\lambda.$ <br>
+<img src="rozw/8-tutorials-4.png" alt="ex" width="60%"> <br>
+Now, we can put everything into our diff. eq. <br>
+<img src="rozw/8-tutorials-5.png" alt="ex" width="60%"> 
+</p>
   <hr>
 
       <h1>
-<div id="div1"> #8 linear differential equation non-homogeneous case $y''+a_1(x) y'+ a_2 (x) y=f(x), f(x) \neq 0.$</div>
+<div id="div1"> #8 linear differential equation non-homogeneous case $y''+a_1(x) y'+ a_2 (x) y=r(x), r(x) \neq 0.$</div>
  </h1>
  <p>
   We are dealing with the following problem:
   Find $y$ such that  
- $y''+a_1 y'+ a_2 y=f(x), a_1, a_2 \in \mathbb{R}.$ <br>
- In this section we will deal with the case when, $f(x)\neq 0. $ 
+ $y''+a_1 y'+ a_2 y=r(x), a_1, a_2 \in \mathbb{R}.$ <br>
+ In this section we will deal with the case when, $r(x)\neq 0. $ 
  Let us recall that we know the solution for homogeneous case i.e. 
  $y_0(x)= c_1 y_1 (x) + y_2 (x) c_2$, where $y_1, y_2$ are fundamental solutions of homogeneous eq. $y''+a_1 y'+ a_2 =0$
  <center> <u><p>Non-homogeneous case.</u></center>
@@ -193,11 +207,11 @@ $y_p(x)=  (c_k x^k + c_{k-1} x^{k-1}+ \ldots c_1 x + c_0 )e^{\alpha x}.$ <br>
 
 Let us also assume that $y_1$, $y_1$ are fundamental solutions of the equation $L(y)=0$. <br>
 For finding general solution of non-homogeneous diff. eq. i.e.
-<u><p>$L(y)=f(x)$</p>
+<u><p>$L(y)=r(x)$</p>
   </u>
 <p>we will use the formula:
  <p>$y(x)=y_p(x)+y_0(x)$,</p>
-  <p>where $y_p$ is a particular solution of $L(y)=f(x)$ and $y_0$ is a general solution of homogeneous diff. eq. $L(y)=0.$ <br>
+  <p>where $y_p$ is a particular solution of $L(y)=r(x)$ and $y_0$ is a general solution of homogeneous diff. eq. $L(y)=0.$ <br>
   Hence, we already know how to solve homogeneous part, it is enough to learn how to find particular solutions. We will work with two methods. The first one is the method of variational parameters, the second is the method of undetermined coefficients. </p>
 <br>
 <p>
@@ -205,7 +219,7 @@ For finding general solution of non-homogeneous diff. eq. i.e.
 <u>Variational of parameters method</u> <br>
 
 Our main problem is to find particular solution of <br>
-<center><p>$y''+a_1(x) y'+ a_2 (x) y=f(x).$</p></center>
+<center><p>$y''+a_1(x) y'+ a_2 (x) y=r(x).$</p></center>
 <p> 
   <u>Note:</u> If $y_1, y_2$ are fundamental solutions ($L(y_1)=0, L(y_2)=0$ and $y_1, y_2$ are lineary independent), then 
   <u>
@@ -216,7 +230,7 @@ Our main problem is to find particular solution of <br>
 </p>
 <p>
   where $c_1, c_2$ are functions satysfying 
- $  \begin{bmatrix} y_1 & y_2 \\ y_1' & y_2' \end{bmatrix}  \left[ \begin{array}{c} c_1' \\ c_2' \end{array} \right]=\left[ \begin{array}{c} 0 \\ f(x) \end{array} \right] $ <br>
+ $  \begin{bmatrix} y_1 & y_2 \\ y_1' & y_2' \end{bmatrix}  \left[ \begin{array}{c} c_1' \\ c_2' \end{array} \right]=\left[ \begin{array}{c} 0 \\ r(x) \end{array} \right] $ <br>
  Here, you can see the proof of the above fact (sorry for denoting argument as $t$ not $x$.)
 
  <p> <div><button title="Click to show/hide content" type="button" onclick="if(document.getElementById('spoiler72') .style.display=='none') {document.getElementById('spoiler72') .style.display=''}else{document.getElementById('spoiler72') .style.display='none'}">Show/hide proof  </p>
@@ -244,7 +258,7 @@ We can solve such system using Cramer's rule: <br>
  <hr>
 
     <h1>
-<div id="div1"> #7 linear differential equation, $y''+a_1(x) y'+ a_2 (x) y=f(x).$</div>
+<div id="div1"> #7 linear differential equation, $y''+a_1(x) y'+ a_2 (x) y=r(x).$</div>
  </h1>
  <p>
  For n-th order linear differential equation with constant coefficients we will use the same idea as previous. We will plug function $y(x)=e^{\lambda x}$ into diff. eq. : 
