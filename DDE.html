@@ -102,10 +102,27 @@ I will uploud solutions in some time.
   \end{cases}$ <br>
 5.  $x(3xy-2) dx + (x^3+2y)dy=0.$
 </p>
+
+
+
+
  <h1>
-<div id="div1"> #12 Systems of differential equations</div>
+<div id="div1"> #13 Systems of diff. eq. - nonhomogeneous case $Y'=AY +R(x)$</div>
+</h1>
+<p>in costruction....</p>
+ <h1>
+<div id="div1"> #12 Systems of differential equations $Y'=AY $</div>
 </h1>
 <p>
+  Before we start with presenting methods of solving such problems let me give you some <b>examples </b> of applications (in random order). <br>
+  <b>Sport:</b> "How to construct mathematical model of sport training", Igor Ryguła, <br>
+  <b>Physics: </b> see chapter "Systems with More Than One Degree of Freedom" from the book:  "Theory of Vibration: An Introduction" by Shabana A., <br>
+  <b>Home heating:</b> <a href="https://www.math24.net/home-heating/"> Click HERE </a>, <br>
+  <b>Economics: </b> Price and Inventory Dynamics <a href="https://www.math24.net/price-inventory-dynamics/"> Click HERE </a>, <br>
+</p>
+<p style="text-align: center;"> How to solve such (real) problems?</p>
+<p>
+
   In the first step we will present the method of solving systems of differential equations i.e. <br>
 
 using the method of elimination. In short, we will transform system of differential equations into differential equation of $n$-th order.
@@ -121,7 +138,7 @@ Plugging into the first equation we are getting:
 $x_2''+x_2'=-x_2'-x_2+3x_2$. 
 As we can see we have <u>the second order diff. </u> eq. i.e. <br>
 $x_2''+2x_2-2x_2=0.$ <br>
-Since you already know how to solve such problems let me give you the link to wolfrapalpha: <br>
+Since you already know how to solve such problems let me give you the link to wolframcloud: <br>
 <iframe width='800' height='100' src='https://www.wolframcloud.com/obj/9f22ebea-2d5c-4bdb-b2be-10fa5711f5ed' frameborder='0'></iframe> <br>
 
 <u>
@@ -150,14 +167,20 @@ b)  <img src="rozw/12-tutorials-3.png" alt="ex" width="70%"> <br>
 Recall that $\color{green} e^{ix}=\cos x + i \sin x.$ <br>
  <img src="rozw/12-tutorials-4.png" alt="ex" width="70%"> <br>
 </p>
- <center> <p>Nonhomogoneous case <br>
- $Y'=AY +R(x)$ </p></center> 
 <p>
-  
+<u>The defective case:</u> <br> 
+<p>
+The last case is when we have double roots for characteristic equation. <br>
+If the eigenvalue $\lambda$ is a double root of the characteristic equation, and $v_1$ is a nonzero eigenvector for $\lambda$, then the eigenvalue is said to be defective. <br>
+For the second independent solution we will use the formula: <br>
+$y_2(x)= e^{\lambda_1 x} (x v_1 + v_2),$ where $v_2 $ is a vector satisfying: <br>
+$(A-\lambda_1 I) v_2 = v_1. $ <br>
 
+<u>Example. </u> Find the solution for $\vec{y}'=A \vec{y}$, where <br> $A=\begin{bmatrix} 0 & 1 \\ -9 & 6 \end{bmatrix}$ <br>
 
-
-
+<u>Solution: </u> <br>
+<img src="rozw/12-tutorials-5.png" alt="ex" width="70%"> <br>
+<img src="rozw/12-tutorials-6.png" alt="ex" width="70%"> <br>
 
 
 </p>
