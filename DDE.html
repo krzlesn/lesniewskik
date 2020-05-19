@@ -115,7 +115,7 @@ using the method of elimination. In short, we will transform system of different
 <u>Example. </u> Solve the following system of diff. equations : <br>
 $x_1'=-x_1 + 3x_2,$ <br>
 $x_2'=x_1-x_2$. <br>
-Solution: Let us use tha second equation to calculate $x_1$, <br>
+Solution: Let us use the second equation to calculate $x_1$, <br>
 $x_1=x_2' + x_2$ and hence, $x_1'=x_2''+x_2'$.
 Plugging into the first equation we are getting: 
 $x_2''+x_2'=-x_2'-x_2+3x_2$. 
@@ -123,6 +123,30 @@ As we can see we have <u>the second order diff. </u> eq. i.e. <br>
 $x_2''+2x_2-2x_2=0.$ <br>
 Since you already know how to solve such problems let me give you the link to wolfrapalpha: <br>
 <iframe width='800' height='100' src='https://www.wolframcloud.com/obj/9f22ebea-2d5c-4bdb-b2be-10fa5711f5ed' frameborder='0'></iframe> <br>
+
+<u>
+  Example. 
+</u> Transform the following second order diff. eq. into system of diff. eq.:<br>
+$y''+2y'+2y=sin(3x)$.<br>
+Let us put $x_1=y$, $x_2= y'$. We obtain,<br>
+$x_1'=x_2,$<br> 
+$x_2'=-2x_1 - 2x_2.$
+
+Now, we will solve some homogeneous problems using the idea of eigenvalues and eigenvectors.<br> If, you didn't have this topic during the course of linear Algebra you can find some informations, <a href="https://tutorial.math.lamar.edu/Classes/DE/LA_Eigen.aspx" > HERE. </a>
+<br>
+<u>Example. </u> Solve the system of diff. eq. $\vec{y}'=A \vec{y}$, where <br>
+a) $A=\begin{bmatrix} 1 & 12 \\ 3 & 1 \end{bmatrix}$ <br>
+b) $A=\begin{bmatrix} 1 & 0 & 0 \\ 0 & 1 & -1\\ 0 & 1 & 1 \end{bmatrix}.$ <br>
+<u>Solution.</u> a) Characteristic eq. is as follows, $w_A(\lambda)= det(A-\lambda I )=0$, where $I$ is an identity map. <br>
+In our case:  <br>
+$ (1-\lambda)^2-36=0.$ <br>
+By solving characteristic eq.  we are getting two distinct real roots: $\lambda_1 = -5, \lambda_2=7.$ <br>
+Now, we are looking for eigenvalues. <br>
+For $\lambda_1=-5 $ we are getting <br>
+$(A-\lambda_1 I) \vec{v} = 0$ (From the definition of eigenvalues such systems have infinitely many solutions). <br>
+<br>
+ <img src="rozw/12-tutorials-2.png" alt="ex" width="70%"> <br> 
+
 </p>
   <h1>
 <div id="div1"> #11 Euler Equations</div>
