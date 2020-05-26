@@ -33,7 +33,13 @@
 <div> </div>
   
 <center> </center>
-  <p style="margin-left: 2.5em;padding: 0 7em 2em 0;border-width: 2px; border-color: black; border-style:solid;">    <font color="blue"> rules: </font> : see prof. Fryszkowski instructions <!--first two during 5th and 10th tutorials (10:15), and the last one during the last lecture (8:15). </font> <br><br>
+  <p style="margin-left: 2.5em;padding: 0 7em 2em 0;border-width: 2px; border-color: black; border-style:solid;">    <font color="blue"> rules: </font> : see prof. Fryszkowski instructions. <br>
+  <font color="blue"> There will be one test during the <u>last lecture. </u> <br>
+  If you get  70% or more then you don't need to write an exam. <br>
+  There will be two exam terms during the summer session. <br>
+  All of you can write an exam. </color>
+
+  <!--first two during 5th and 10th tutorials (10:15), and the last one during the last lecture (8:15). </font> <br><br>
   Let $X \in [0,50]$ be a number of your points. <br><br>
   $X=A+B$, where $A \in [0,3\cdot 15]=[0,45]$ is taken from tests, and $B\in [0,5+\varepsilon_X]$ is a number of activity points (for some $\varepsilon_X >0$). <br><br>
   <font color="#00bfff"> If $2 \cdot X \ge 71$ you don't need to write an exam. </font> <br><br></center>
@@ -103,15 +109,52 @@ I will uploud solutions in some time.
 5.  $x(3xy-2) dx + (x^3+2y)dy=0.$
 </p>
 
-
-
-
- <h1>
-<div id="div1"> #13 Systems of diff. eq. - nonhomogeneous case $Y'=AY +R(x)$</div>
+<h1>
+<div id="div1"> #15 Difference equations</div>
 </h1>
-<p>in costruction....</p>
+<h1>
+<div id="div1"> #14 Laplace transform</div>
+</h1>
+
  <h1>
-<div id="div1"> #12 Systems of differential equations $Y'=AY $</div>
+<div id="div1"> #13 Systems of diff. eq. - nonhomogeneous case $\vec{Y'}=AY +R(x)$</div>
+</h1>
+<p>
+   For systems of differential equations with a nonzero right-hand side we have at least three methods of solving. <br>
+   Our main problem is to find vector function $\vec{y}$ satisfying 
+  <center><p>$\vec{y'}=Ay +R(x)$</p></center>
+<u><p> I Method: </p></u> <p>Suppose that $M(x)$ is a fundamental matrix solution i.e. 
+
+<ul> 
+  <li> <p>$M(x)$ satisfies $M'(x)=A M(x)$ </p></li>
+  <li><p>$M(x)$ is an invertible matrix for every $x$, i.e. the $n$ columns of $M(x)$ are linearly independent,</p></li>
+  
+</ul>
+
+<p>then the general solution of nonhomogeneous system is given by  </p>
+<center><p>
+  
+  $\vec{y}(x)= M(x) \begin{bmatrix}
+           c_{1} \\
+           c_{2} \\
+           \vdots \\
+           c_{n}
+         \end{bmatrix} + \int^x M(x) M(s)^{-1} \vec{R(s)} ds,$
+</p></center>
+
+$C_1, C_2, \ldots, C_n$ are arbitrary constants. <br>
+
+
+<u><p> II Method: </p></u> <p> Let me explain this method using an example. <br> </p>
+  <u> <p>Example. <p></u> 
+<p>
+Solve the following systems of differential equations: <br>
+1. $\begin{cases} y_1'(x) = y_2 + x, \\
+y_2'(x) = -y_1(x) - x
+ \end{cases}$
+</p>
+ <h1>
+<div id="div1"> #12 Systems of differential equations $\vec{Y'}=AY $</div>
 </h1>
 <p>
   Before we start with presenting methods of solving such problems let me give you some <b>examples </b> of applications (in random order). <br>
