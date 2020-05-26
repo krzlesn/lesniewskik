@@ -102,13 +102,13 @@ I will uploud solutions in some time.
   <p> 1.  $y''+y'=e^{-x}+5x+2,$ <br>
   2.  $y''+y=\frac{1}{\sqrt{cos(2x)}},$ <br>
   3.  $y''-\frac 3 x y'+ \frac{4}{x^2}y=5,$ <br>
- 4.  $\begin{cases}
- x'(t)=x-y+cost \\
- y'(t)=x-2y+sint.
-  \end{cases}$ <br>
+ 4.   $\begin{cases} y_1'(x) =  y_2 +  x, \\
+y_2'(x) = -y_1 + x.
+ \end{cases}$
+<br>
 5.  $x(3xy-2) dx + (x^3+2y)dy=0.$
 </p>
-
+<hr>
 <h1>
 <div id="div1"> #15 Difference equations</div>
 </h1>
@@ -141,21 +141,33 @@ I will uploud solutions in some time.
            c_{n}
          \end{bmatrix} + \int^x M(x) M(s)^{-1} \vec{R(s)} ds,$
 </p></center>
-
+<p>
 $C_1, C_2, \ldots, C_n$ are arbitrary constants. <br>
+</p>
 
-
-<u><p> II Method: </p></u> <p> Let me explain this method using an example. <br> </p>
+<u><p> II Method: </p></u> <p> Let me explain this method using an example. The idea is similar to the formula used in the first method. But now you can see the connection between the method of variation of parameters for second order diff. eq.<br> </p>
   <u> <p>Example. <p></u> 
 <p>
 Solve the following systems of differential equations: <br>
-1. $\begin{cases} y_1'(x) = y_2 + x, \\
-y_2'(x) = -y_1(x) - x
+1. $\begin{cases} y_1'(x) = y_1 + y_2-\cos x, \\
+y_2'(x) = -2y_1-y_2 +\sin x + \cos x.
  \end{cases}$
-
-
+<br>
+<img src="rozw/13-tutorials-1.jpg" alt="ex" width="70%"> <br> 
  <br>
- in construction.....
+
+ <u> <p>Example. <p></u> 
+<p>
+Solve the following systems of differential equations: <br>
+1. $\begin{cases} y_1'(x) =  y_2 +  x, \\
+y_2'(x) = -y_1 + x.
+ \end{cases}$
+<br>
+<img src="rozw/13-tutorials-1.png" alt="ex" width="70%"> <br> 
+ <br>
+Now, its enough to calculate two antiderivatives:<br>
+<iframe width='500' height='160' src='https://www.wolframcloud.com/obj/krzlesn/Published/systems-1.nb' frameborder='0'></iframe> <br>
+ Answer: $y(x)=c_1 \begin{bmatrix} \cos x \\ \sin x  \end{bmatrix} + c_2  \begin{bmatrix} -\sin x \\ \cos x  \end{bmatrix}+ y_p(x), $ where  $y_p(x)= c_1(x) \begin{bmatrix} \cos x \\ \sin x  \end{bmatrix} + c_2(x)  \begin{bmatrix} -\sin x \\ \cos x  \end{bmatrix} $ ($c_1(x), c_2(x)$ are calculated in the above wolframcloud iframe)
 </p>
  <h1>
 <div id="div1"> #12 Systems of differential equations $\vec{Y'}=AY $</div>
