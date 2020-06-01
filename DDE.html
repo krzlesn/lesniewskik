@@ -69,7 +69,15 @@ function myFunction() {
   [3]. Ordinary Differential equations, Gabriel  Nagy, Mathematics Departmen, Michigan State University, lecture notes.
 
 
-      <h1>
+     
+          <p style="margin-left: 2.5em;padding: 0 7em 2em 0;border-width: 2px; border-color: black; border-style:solid;">
+    <b>Topics: </b> <u>First order diff. eq. :</u> (separable, homogeneous, linear: integrating factor, variation of parameter), orthogonal trajectories. <br>
+    <u>Second order diff. eq. : </u> constant coefficient case: method of undetermined coefficients, variation of parameters,  Euler sec. order. diff. eq., n-th order diff. eq. <br>
+    <u>Systems of diff. eq.:</u> For such problems you can use the method of reduction or matrices method (using eigenvalues and eigenvectors) <br>
+    <u>Laplace transform:</u> We will solve the above problems using Laplace transform. <br>
+    <u>Difference equations:</u> First and second order of difference equations. ( Note: Only the first order will appear during the test).
+
+ <h1>
 <div id="div3">An Example of #I TEST:</div>
  </h1>
  <p>
@@ -138,11 +146,34 @@ y_2'(x) = -y_1 + x.
            c_{2} \\
            \vdots \\
            c_{n}
-         \end{bmatrix} + \int^x M(x) M(s)^{-1} \vec{R(s)} ds,$
+         \end{bmatrix} + \int^x M(x) M(s)^{-1} \vec{R(s)} ds, {\color{blue} (*)}$
 </p></center>
 <p>
 $C_1, C_2, \ldots, C_n$ are arbitrary constants. <br>
 </p>
+  <u> <p>Example. </u> Solve :  $\begin{cases} y_1'(x) = y_2 + +x, \\
+y_2'(x) = -y_1 -x.
+ \end{cases}$ <br>
+
+<u><p>Solution:</p></u> For solving the above problem using the first method it is enough to plug everything into the direct formula for solution i.e. eq. $\color{blue} (*)$. <br>
+
+Let us find eigenvalues and eigenvectors. 
+<br>
+<img src="rozw/13-tutorials-4.png" alt="ex" width="70%"> <br> 
+ <br>
+ In the complex case it is enough to take only one eigenvector and then split complex function into the real and imaginary part. <br>
+ <br>
+<img src="rozw/13-tutorials-5.png" alt="ex" width="70%"> <br> 
+ <br>
+ Now, using formula ${\color{blue} (*)}$ we get<br>
+<img src="rozw/13-tutorials-7.png" alt="ex" width="70%"> <br>
+<p>
+Answear ($x\rightarrow y_1, y\rightarrow y_2, x\rightarrow t$): 
+<iframe width='800' height='200' src='https://www.wolframcloud.com/obj/7896ad23-390b-4f55-a156-f658506d23b8' frameborder='0'></iframe>
+</p>
+
+
+<hr>
 
 <u><p> II Method: </p></u> <p> Let me explain this method using an example. The idea is similar to the formula used in the first method. But now you can see the connection between the method of variation of parameters for second order diff. eq.<br> </p>
   <u> <p>Example. <p></u> 
