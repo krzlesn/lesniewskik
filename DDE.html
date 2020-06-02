@@ -129,7 +129,7 @@ y_2'(x) = -y_1 + x.
 <br>
 <b>The idea is to solve algebraic equation instead of differential equation.</b>
 <center>$y(t) \rightarrow \tilde{Y}(x) = \int e^{-st} y(t) dt$</center>
-
+<p>We will denote Laplace Transform by $\cal{L}$ or $Y.$
  </p> 
 <p>
   <br>
@@ -143,7 +143,7 @@ y_2'(x) = -y_1 + x.
 <a href="http://www.mini.pw.edu.pl/%7Efryszko/www/?download=Laplace%20Table.doc">
 Here (CLICK) </a> you can find the Laplace table taken from prof. Fryszkowski webpage. 
 
-
+<br>
 <u>Example.</u> Let us calculate Laplace Transform of $te^{at},$  where $a\in\mathbb{R}.$ <br>
 <img src="rozw/14-tutorials-3.png" alt="ex" width="70%"> <br> 
  <br>
@@ -151,6 +151,80 @@ Here (CLICK) </a> you can find the Laplace table taken from prof. Fryszkowski we
 
 </p>
 
+<p>
+
+
+Now, let us prepare some tools. <br>
+
+We say that function $y$ defined on $[0, \infty)$is of exponential orderd $s_0$, iff there exist positive constants $k, T$ such that 
+$|y(t)| \le k e^{s_0 t}$ for all $t>T.$ <br>
+
+
+
+
+
+From the lecture we know that, if a a fuction $y$ is continuously differentiable on $[0, \infty)$ and of exponential order $s_0$, then $\cal{L}[y']$ exists for $s>s_0$ and 
+<center> <b><p>$\cal{L}[y']=s\cal{L}[y]-y(0),$ </p></b><p>
+ </center>
+<p>By mathematical induction we can prove that if $y$ is n-times continuously differentiable on $[0,\infty]$ and of exponential order $s_0$, then $\cal{L}[y''], \ldots, \cal{L}[y^{(n)}]$ exist  for $s>s_0$ and 
+
+<center>
+
+
+
+  <p>
+  
+
+    $\cal{L}[y'']=s^2\cal{L}[y]-sy(0)-y'(0),$ <br>
+$\vdots$ <br>
+
+  $\cal{L}[y^{(n)}]=s^n\cal{L}[y]-s^{(n-1)}y(0)-\ldots -y^{(n-1)}(0).$ <br>
+ </center>
+ <p>
+
+
+   We also know that Laplace Transform is linear i.e. $\cal{L}[af+bg]=a\cal{L}[f]+b\cal{L}[g]$. <br>
+Let us try to use Laplace Transform for solving very simple diff. eq. <br>
+
+<u>Example.</u> Use the Laplace transfor to find $y$ solution of $y''+9y=0, y(0)=y_0, y'(0)=y_1.$ <br>
+Solution: Calculating Laplace Transform of both side we get <br>
+$\cal{L} [y''+9y] =\cal{L}[0] \equiv \cal{L} [y''] + 9\cal{L}[y] =\cal{L}[0]=0 .$ <br>
+Using the formula for the second derivative we have <br>
+
+$s^2 \cal{L}[y] - s y_0 -y_1 + 9 \cal{L}[y] = 0 .$ As you can see we have an <b>algebraic equation</b> (there are no derivatives etc.). <br> 
+
+Solving the above algebraic eq. we get  $\cal{L}[y] = \frac{sy_0 + y_1}{s^2+9}. $
+<br> The most complicated part is to find the inverse of Laplace transform (we want go back to our unknown $y$.) Therefore, we need to express $\frac{sy_0 + y_1}{s^2+9}$ in such a way that we can use the 3rd column of the table.... <br>
+
+
+<img src="rozw/14-tutorials-4.png" alt="ex" width="50%"> <br> 
+
+We can write that $\cal{L}[y]= y_0 \frac{s}{s^2} + y_1 \frac{1}{s^2+9} .$
+
+From the table we can deduce that $y(t)=y_0 \cos(3t) + \frac{1}{3} y_1\sin (3t).$
+
+
+
+
+
+
+
+
+  </p>
+
+
+
+
+
+<p>
+
+
+
+
+
+
+
+</p>
 
 
 <p>I highly recommend the following lectures: <br>
@@ -166,6 +240,8 @@ And my favorite (Unfortunately in Polish). Uwaga: pochodna oznaczona jest przez 
 
 
 </p>
+
+
 
 
  <h1>
