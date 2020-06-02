@@ -147,8 +147,7 @@ Here (CLICK) </a> you can find the Laplace table taken from prof. Fryszkowski we
 <u>Example.</u> Let us calculate Laplace Transform of $te^{at},$  where $a\in\mathbb{R}.$ <br>
 <img src="rozw/14-tutorials-3.png" alt="ex" width="70%"> <br> 
  <br>
-
-
+<br>
 </p>
 
 <p>
@@ -184,8 +183,9 @@ $\vdots$ <br>
 
 
    We also know that Laplace Transform is linear i.e. $\cal{L}[af+bg]=a\cal{L}[f]+b\cal{L}[g]$. <br>
-Let us try to use Laplace Transform for solving very simple diff. eq. <br>
-
+Let us try to use Laplace Transform for solving very simple diff. eq. <br> <br>
+<hr>
+<p>
 <u>Example.</u> Use the Laplace transfor to find $y$ solution of $y''+9y=0, y(0)=y_0, y'(0)=y_1.$ <br>
 Solution: Calculating Laplace Transform of both side we get <br>
 $\cal{L} [y''+9y] =\cal{L}[0] \equiv \cal{L} [y''] + 9\cal{L}[y] =\cal{L}[0]=0 .$ <br>
@@ -203,7 +203,9 @@ We can write that $\cal{L}[y]= y_0 \frac{s}{s^2} + y_1 \frac{1}{s^2+9} .$
 
 From the table we can deduce that $y(t)=y_0 \cos(3t) + \frac{1}{3} y_1\sin (3t).$
 
-
+<br>
+<hr>
+<p>
 <u>Example. </u> Solve $y'-2y=e^t, y(0)=-4.$ <br>
 <img src="rozw/14-tutorials-5.png" alt="ex" width="50%"> <br> 
 
@@ -213,7 +215,8 @@ From the Laplace table: <br>
 we can write the inverse of Laplace Table and our then our solution: <br>
 <img src="rozw/14-tutorials-7.png" alt="ex" width="50%"> <br> 
 
-
+<hr>
+<p>
 <u>Example. </u> <br>
 
 <img src="rozw/14-tutorials-9.png" alt="ex" width="60%"> <br> 
@@ -221,7 +224,8 @@ we can write the inverse of Laplace Table and our then our solution: <br>
 
 
 
-
+<hr>
+<p>
 
 
 
@@ -234,7 +238,55 @@ For systems the idea is the same, we will get system of algebraic equations. <br
 
 
 
+For practicing you can solve the above example using matrices ideas and then compare the results <br>
 
+<br>
+<hr>
+<p>
+
+How to deal with more complicated (not that much:)) right-hand side functions? <br>
+
+<u>Example. </u> Calculate Laplace Transform of $y(t)=t^2e^{3t}.$ <br>
+
+
+Instead of using definition we will differentiate both side two times. 
+<br>
+<img src="rozw/14-tutorials-10.png" alt="ex" width="60%"> <br> 
+
+Now, using partial fraction decomposition you can find an answer. <br>
+
+Instead of doing that, let us recall another property of Laplace transform <br>
+
+
+<img src="rozw/14-tutorials-11.png" alt="ex" width="60%"> <br> 
+
+Using the above fact we can give a solution for previous example. <br>
+$\cal{L}[t^2 e^{3t}] = \frac{2}{(s-3)^3}.$  <br>
+<hr>
+<p> <u>Example. </u> <br>
+
+
+  <img src="rozw/14-tutorials-12.png" alt="ex" width="30%"> <br> 
+
+<hr>
+<p>
+  
+
+After so many examples you should have one question: why we are dealing with the same problems, is there any reason for using  Laplace Transform instead of previous methods? <br>
+
+
+So, we are using Laplace Transform because in some cases it is much faster. Furthermore, we can use Laplace Transform in non-homogeneous problems, when the right-hand side is not even a function (Delta Dirac). Unfortunately we don't have time for such problems. If you are interest see. 
+
+
+
+
+
+
+</p>
+
+
+
+</p>
 
 
 
