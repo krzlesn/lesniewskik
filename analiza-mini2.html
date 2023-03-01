@@ -52,6 +52,110 @@ Oto kilka zastosowań przestrzeni metrycznych:
 </li>
 
 </ul>
+<p><u>Metryka Hausdorffa: </u> </p>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hausdorff Distance Formula</title>
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<p>Odległość Hausdorffa dla zbiorów  A, B jest dana jako:</p>
+		<p style="text-align: center;"><span style="border-top: 1px solid #000;">sup inf d(a, b)</span></p>
+		<p style="text-align: center;">a∈A b∈B</p>
+		<p>gdzie d(a, b) jest odległością euklidesową pomiędzy punktami a i b.</p>
+	</div>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hausdorff Distance</title>
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+		}
+		canvas {
+			display: block;
+			margin: 0 auto;
+		}
+	</style>
+</head>
+<body>
+	<canvas id="canvas" width="500" height="500"></canvas>
+	<script>
+		// Define two sets of points
+		var set1 = [[100, 100], [200, 200], [300, 300], [400, 400]];
+		var set2 = [[150, 150], [200, 200], [250, 250], [300, 300]];
+
+		// Compute the Hausdorff distance between the two sets
+		var maxDist = 0;
+		var maxPair = [0, 0];
+		for (var i = 0; i < set1.length; i++) {
+			var minDist = Infinity;
+			var minPair = [0, 0];
+			for (var j = 0; j < set2.length; j++) {
+				var dist = Math.sqrt(Math.pow(set1[i][0] - set2[j][0], 2) + Math.pow(set1[i][1] - set2[j][1], 2));
+				if (dist < minDist) {
+					minDist = dist;
+					minPair = [i, j];
+				}
+			}
+			if (minDist > maxDist) {
+				maxDist = minDist;
+				maxPair = minPair;
+			}
+		}
+
+		// Display the Hausdorff distance and the line between the two points on the canvas
+		var canvas = document.getElementById("canvas");
+		var ctx = canvas.getContext("2d");
+		ctx.font = "30px Arial";
+		ctx.fillStyle = "black";
+		ctx.textAlign = "center";
+		ctx.fillText("Hausdorff Distance: " + maxDist.toFixed(2), canvas.width/2, 30);
+		ctx.beginPath();
+		ctx.moveTo(set1[maxPair[0]][0], set1[maxPair[0]][1]);
+		ctx.lineTo(set2[maxPair[1]][0], set2[maxPair[1]][1]);
+		ctx.strokeStyle = "black";
+		ctx.stroke();
+
+		// Draw the two sets of points on the canvas
+		ctx.fillStyle = "red";
+		for (var i = 0; i < set1.length; i++) {
+			ctx.beginPath();
+			ctx.arc(set1[i][0], set1[i][1], 5, 0, 2*Math.PI);
+			ctx.fill();
+		}
+		ctx.fillStyle = "blue";
+		for (var i = 0; i < set2.length; i++) {
+			ctx.beginPath();
+			ctx.arc(set2[i][0], set2[i][1], 5, 0, 2*Math.PI);
+			ctx.fill();
+		}
+	</script>
+</body>
+</html>
+<p>Przykłady i kilka zastosowań 
+<a href="http://cgm.cs.mcgill.ca/~godfried/teaching/cg-projects/98/normand/main.html">KLIK</a>
+</p>
+
+<p>Inne zastosowania metryki Hausdorffa:</p>
+<ol>
+<li>S. Yu, X. Zhang, and S. Li, "A Hausdorff Distance-Based Approach for Image Retrieval Using Salient Regions," <i>IEEE Transactions on Multimedia</i>, vol. 19, no. 7, pp. 1538-1547, 2017.</li>
+<li>J. Li and A. M. Dollar, "Real-time tracking of a moving object using a robot-mounted camera," <i>Proceedings of the 2019 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)</i>, pp. 2215-2220, 2019.</li>
+<li>K. H. Kwon, S. H. Kim, and S. H. Lee, "3D shape retrieval using extended Hausdorff distance and entropy-based weight," <i>Pattern Recognition</i>, vol. 46, no. 1, pp. 53-63, 2013.</li>
+<li>R. M. Haralick, "Medical image analysis: a brief survey of recent research," <i>IEEE Transactions on Medical Imaging</i>, vol. 15, no. 3, pp. 299-308, 1996.</li>
+<li>J. A. Sethian, "Level Set Methods and Fast Marching Methods: Evolving Interfaces in Computational Geometry, Fluid Mechanics, Computer Vision, and Materials Science," Cambridge University Press, 1999.</li>
+</ol>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Usngvpiv_LI?timestamp=1234" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </p>
 <hr>
