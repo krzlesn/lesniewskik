@@ -22,7 +22,103 @@
 
    </h1>
    <p>
-   Zastosowania topologii (odpowiedź wygenerowana poprzez czat.openai): 
+      Zastosowania topologii (odpowiedź wygenerowana poprzez czat.openai): </p>
+   <p>
+      <!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Topology Animation</title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.min.js"></script>
+	<style>
+		canvas {
+			display: block;
+			margin: auto;
+			background-color: #fff;
+			box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+		}
+	</style>
+</head>
+<body>
+	<script>
+		let t = 0;
+		let n = 100;
+
+		function setup() {
+			createCanvas(400, 400);
+			background(255);
+			stroke(0);
+			noFill();
+		}
+
+		function draw() {
+			// draw the initial circle
+			if (t <= 1/3) {
+				let r = height/3;
+				let cx = width/2;
+				let cy = height/2;
+				let theta = map(t, 0, 1/3, 0, TWO_PI);
+				let x = cx + r*cos(theta);
+				let y = cy + r*sin(theta);
+				ellipse(cx, cy, 2*r);
+				line(cx, cy, x, y);
+			}
+			// deform the circle into a square
+			else if (t <= 2/3) {
+				let s = map(t, 1/3, 2/3, 0, 1);
+				let w = height/3;
+				let h = height/3;
+				let cx = width/2;
+				let cy = height/2;
+				let x1 = cx - w/2;
+				let y1 = cy - h/2;
+				let x2 = cx + w/2;
+				let y2 = cy - h/2;
+				let x3 = cx + w/2;
+				let y3 = cy + h/2;
+				let x4 = cx - w/2;
+				let y4 = cy + h/2;
+				beginShape();
+				vertex(x1, y1);
+				vertex(x2, y2);
+				vertex(lerp(x2, x3, s), lerp(y2, y3, s));
+				vertex(lerp(x1, x4, s), lerp(y1, y4, s));
+				endShape(CLOSE);
+			}
+			// draw the final square
+			else {
+				let w = height/3;
+				let h = height/3;
+				let cx = width/2;
+				let cy = height/2;
+				let x1 = cx - w/2;
+				let y1 = cy - h/2;
+				let x2 = cx + w/2;
+				let y2 = cy - h/2;
+				let x3 = cx + w/2;
+				let y3 = cy + h/2;
+				let x4 = cx - w/2;
+				let y4 = cy + h/2;
+				beginShape();
+				vertex(x1, y1);
+				vertex(x2, y2);
+				vertex(x3, y3);
+				vertex(x4, y4);
+				endShape(CLOSE);
+			}
+
+			// increment time
+			t += 1/n;
+			if (t > 1) {
+				noLoop();
+			}
+		}
+	</script>
+</body>
+
+      
+   </p>
+   <p>
       Topology is a branch of mathematics that studies the properties and relationships of spaces that are preserved under continuous transformations, such as stretching, bending, and twisting. It provides a powerful framework for understanding the structure and behavior of geometric objects, including surfaces, curves, and higher-dimensional spaces.
 
 There are many reasons why topology is important in mathematics and other fields:
@@ -38,9 +134,12 @@ Topology is used in computer science, where it is used to study the properties o
 Topology is also used in other fields such as biology, economics, and social sciences, where it provides a powerful framework for understanding the relationships between objects and systems.
 
 In summary, topology provides a powerful framework for understanding the properties and relationships of spaces and objects, and it has applications in a wide range of fields.
-      
+   </p>
+   <p>
       <b> Give me some more applications </b> 
-    Topology has a wide range of applications in different fields. Here are some examples:
+   </p>
+   <p>
+      Topology has a wide range of applications in different fields. Here are some examples:
 
 Computer Science: Topology is used in computer science to study the properties of networks, data structures, and algorithms. For example, the field of network topology studies the shape and structure of computer networks, and helps to design efficient routing protocols and distributed systems.
 
@@ -53,7 +152,7 @@ Engineering: Topology optimization is used in engineering to optimize the shape 
 Data Analysis: Topological data analysis is a relatively new field that uses topology to study complex data sets, such as those arising from genetics, neuroscience, and social networks. It provides a powerful tool for detecting patterns and structures in large and noisy data sets.
 
 These are just a few examples of the many applications of topology in different fields. Overall, topology plays a crucial role in understanding the properties and relationships of objects and systems, and has important practical applications in science, engineering, and technology.
-
+   </p>
     <iframe width="560" height="315" src="https://www.youtube.com/embed/2PSqWBIrn90" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 
