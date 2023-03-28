@@ -160,100 +160,7 @@ Oto kilka zastosowań przestrzeni metrycznych:
 </p>
 <hr>
       <u>Zastosowania topologii </u> (odpowiedź wygenerowana poprzez czat.openai): 
-   <meta charset="utf-8">
-	<title>Topology Animation</title>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.min.js"></script>
-	<style>
-		canvas {
-			display: block;
-			margin: auto;
-			background-color: #fff;
-			box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-		}
-	</style>
-
-<main>
-	<script>
-		let t = 0;
-		let n = 100;
-
-		function setup() {
-			createCanvas(400, 400);
-			background(255);
-			stroke(0);
-			noFill();
-		}
-
-		function draw() {
-			// draw the initial circle
-			if (t <= 1/3) {
-				let r = height/3;
-				let cx = width/2;
-				let cy = height/2;
-				let theta = map(t, 0, 1/3, 0, TWO_PI);
-				let x = cx + r*cos(theta);
-				let y = cy + r*sin(theta);
-				ellipse(cx, cy, 2*r);
-				line(cx, cy, x, y);
-			}
-			// deform the circle into a square
-			else if (t <= 2/3) {
-				let s = map(t, 1/3, 2/3, 0, 1);
-				let w = height/3;
-				let h = height/3;
-				let cx = width/2;
-				let cy = height/2;
-				let x1 = cx - w/2;
-				let y1 = cy - h/2;
-				let x2 = cx + w/2;
-				let y2 = cy - h/2;
-				let x3 = cx + w/2;
-				let y3 = cy + h/2;
-				let x4 = cx - w/2;
-				let y4 = cy + h/2;
-				beginShape();
-				vertex(x1, y1);
-				vertex(x2, y2);
-				vertex(lerp(x2, x3, s), lerp(y2, y3, s));
-				vertex(lerp(x1, x4, s), lerp(y1, y4, s));
-				endShape(CLOSE);
-			}
-			// draw the final square
-			else {
-				let w = height/3;
-				let h = height/3;
-				let cx = width/2;
-				let cy = height/2;
-				let x1 = cx - w/2;
-				let y1 = cy - h/2;
-				let x2 = cx + w/2;
-				let y2 = cy - h/2;
-				let x3 = cx + w/2;
-				let y3 = cy + h/2;
-				let x4 = cx - w/2;
-				let y4 = cy + h/2;
-				beginShape();
-				vertex(x1, y1);
-				vertex(x2, y2);
-				vertex(x3, y3);
-				vertex(x4, y4);
-				endShape(CLOSE);
-			}
-
-			// increment time
-			t += 1/n;
-			if (t > 1) {
-				noLoop();
-			}
-		}
-	</script>
-
-
-      </p>
-   <p>
-      <!DOCTYPE html>
-<html>
-<head>
+   
 	
    </p>
    <p>
@@ -343,14 +250,27 @@ Poniżej krótka lista zastosowań Twierdzenia Banacha o punkcie stałym w fizyc
 
 <hr>
 <p>Zastosowania Twierdzenia Taylora.</p>
-<p><a href="https://u.cs.biu.ac.il/~schiff/taylor.html">Przykłady przybliżeń </a>
+<p><a href="https://u.cs.biu.ac.il/~schiff/taylor.html">Przykłady przybliżeń (link) </a>
 </p>
 <p>
-Historia (źródło WIKI): Pod koniec 1670 roku James Gregory otrzymał list od Johna Collinsa, w którym pokazano mu kilka szeregów Maclaurina (sinus, cosinus, arcsinus, tangens, cotangens) wywiedzionych przez Isaaca Newtona i poinformowano, że Newton opracował ogólną metodę rozszerzania funkcji w szeregi. Newton faktycznie użył metody długiego dzielenia szeregów i całkowania po składnikach, ale Gregory o tym nie wiedział i postanowił samodzielnie odkryć ogólną metodę. W początkach 1671 roku Gregory odkrył coś w rodzaju ogólnego szeregu Maclaurina i wysłał list do Collinsa zawierający szeregi dla szeregu funkcji trygonometrycznych. Gregory nigdy nie opisał, jak uzyskał te szeregi, i można wnioskować, że zrozumiał metodę ogólną, badając rękopis, który zapisał na odwrocie innego listu z 1671 roku.
-<a href="https://mathshistory.st-andrews.ac.uk/Biographies/Gregory/">Historia Jamesa Gregorego (link) </a> <br>
-<img src="gregory.png" alt="description of the image">
+Historia (źródło WIKI): Pod koniec 1670 roku James Gregory otrzymał list od Johna Collinsa, w którym pokazano mu kilka szeregów Maclaurina (sinus, cosinus, arcsinus, tangens, cotangens) wywiedzionych przez Isaaca Newtona i poinformowano, że Newton opracował ogólną metodę rozszerzania funkcji w szeregi. Newton faktycznie użył metody długiego dzielenia szeregów i całkowania po składnikach, ale Gregory o tym nie wiedział i postanowił samodzielnie odkryć ogólną metodę. W początkach 1671 roku Gregory odkrył coś w rodzaju ogólnego szeregu Maclaurina i wysłał list do Collinsa zawierający szeregi dla szeregu funkcji trygonometrycznych. Gregory nigdy nie opisał, jak uzyskał te szeregi, i można wnioskować, że zrozumiał metodę ogólną, badając rękopis, który zapisał na odwrocie innego listu z 1671 roku.<br>
+<figure>
+<img src="gregory.png" alt="James Gregory historia">
+<figurecaption> <a href="https://mathshistory.st-andrews.ac.uk/Biographies/Gregory/">  James Gregory (źródło/link) <a href="https://mathshistory.st-andrews.ac.uk/Biographies/Gregory/">  </figurecaption>
+</figure>
+</p>
+<p>
+Przykładowe wyznaczenie rozwinięcia funkcji $\arcsin x$ za pomocą szeregu zaproponowane przez Isaaca Newtona:
+
+Za pomocą np. indukcji matematycznej możemy pokazać, że 
+$
+(1+x)^{-\frac 1 2} = \sum\limits_{n=0}^{\infty} \frac{(-1)^n (2n)!}{4^n (n!)^2} x^n.
+$
+Stąd zmieniając zmienną $x$ na $x^2$ i całkując wyraz po wyrazie otrzymamy nasz szereg.
 
 </p>
+<hr>
+
 </body>
 </head>
 </main>
