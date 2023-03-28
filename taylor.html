@@ -1,0 +1,22 @@
+<div class="container">
+  <h1 class="display-5">Taylor Series Approximations <small class="text-muted">@ a = 0</small></h2>
+    <div class="form-group form-inline border rounded">
+      <label class="input-group-text border rounded-0">Degree</label>
+      <input class="form-check-input ml-4" type="radio" name="degree" id="terms1" value="1">1</input>
+      <input class="form-check-input ml-4" type="radio" name="degree" id="terms2" value="2">2</input>
+      <input class="form-check-input ml-4" type="radio" name="degree" id="terms3" value="3">3</input>
+      <input class="form-check-input ml-4" type="radio" name="degree" id="terms4" value="4">4</input>
+      <input class="form-check-input ml-4" type="radio" name="degree" id="terms5" value="5" checked>5</input>
+    </div>
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <label class="input-group-text" for="function">Function to Tinker</label>
+      </div>
+      <select class="custom-select" id="function">
+        <option value="1" selected>sin(x)</option>
+        <option value="2">cos(x)</option>
+        <option value="3">e^x</option>
+      </select>
+    </div>
+    <canvas id="lineChart"></canvas>
+</div>
