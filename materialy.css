@@ -71,3 +71,9 @@ a:hover{color:var(--accent)}
 .task-sets li a:hover{background:#e1eadd}
 .research-link{color:#6e7868}
 @media(max-width:600px){.consultation-contact{border-top-color:#d9cfba}}
+
+/* Match material headings to the consultation heading. */
+.course strong,.task-sets>summary,.interactive h3{font-size:17px;font-weight:500}
+.course small{font-size:12px}
+.course-id{font-size:19px;min-width:40px;height:40px}
+@media(max-width:600px){.course strong,.task-sets>summary,.interactive h3{font-size:17px}.course small{font-size:12px}}
