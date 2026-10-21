@@ -77,3 +77,11 @@ a:hover{color:var(--accent)}
 .course small{font-size:12px}
 .course-id{font-size:19px;min-width:40px;height:40px}
 @media(max-width:600px){.course strong,.task-sets>summary,.interactive h3{font-size:17px}.course small{font-size:12px}}
+
+/* A quiet third column for the quotation. */
+.consultations{grid-template-columns:1fr .8fr 1.25fr;gap:20px}
+.consultation-quote{margin:0;border-left:1px solid #d9cfba;padding-left:20px;color:#506258}
+.consultation-quote blockquote{margin:0;font-size:12px;line-height:1.75}
+.consultation-quote figcaption{margin-top:10px;font-size:10px;line-height:1.6;color:#6d7469}
+.consultation-quote cite{font-style:normal}
+@media(max-width:800px){.consultations{grid-template-columns:1fr}.consultation-contact,.consultation-quote{border-left:0;border-top:1px solid #d9cfba;padding:14px 0 0}}
