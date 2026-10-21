@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="pl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Granica ciągu — ε i N</title>
+<style>
+:root{font-family:system-ui,sans-serif;color:#182f46;background:#f2f6fa;font-size:16px}*{box-sizing:border-box}body{margin:0}main{max-width:1180px;margin:auto;padding:30px 22px}h1{font-size:clamp(25px,4vw,38px);margin:0 0 8px}p{line-height:1.55}.intro{color:#486078;max-width:850px}.formula{font-family:Georgia,serif;font-size:clamp(18px,3vw,25px);padding:20px;background:#e6eef8;border-radius:12px;text-align:center}.layout{display:grid;grid-template-columns:280px minmax(0,1fr);gap:22px;margin-top:24px}.controls,.plotpanel{background:white;border:1px solid #d9e2ec;border-radius:16px;padding:20px}label{display:block;margin-bottom:7px;font-weight:650}select,input[type=number]{width:100%;padding:10px;border:1px solid #a9bbcc;border-radius:7px;background:white;color:inherit;font-size:16px}input[type=range]{width:100%;accent-color:#235cc3;min-height:32px} .field{margin-bottom:22px}.value{float:right;font-variant-numeric:tabular-nums;color:#235cc3}button{padding:11px 14px;font:inherit;background:#235cc3;color:white;border:0;border-radius:8px;cursor:pointer}button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid #e7a726;outline-offset:3px}.small{font-size:14px;color:#486078;line-height:1.5}.legend{display:flex;gap:18px;flex-wrap:wrap;font-size:14px;margin:6px 0 16px}.inside{color:#087960}.outside{color:#bc3b39}canvas{display:block;width:100%;height:390px}.status{padding:15px;border-radius:10px;background:#edf3fb;line-height:1.55;margin-top:16px;overflow-wrap:anywhere}.status.good{background:#e5f5ee}.status.bad{background:#fff0ec}h2{font-size:19px;margin:0 0 12px}details{margin-top:22px;background:white;padding:18px;border-radius:12px}summary{cursor:pointer;font-weight:650}.note{margin-bottom:0} @media(max-width:750px){main{padding:20px 12px}.layout{grid-template-columns:1fr}.controls{display:grid;grid-template-columns:1fr 1fr;gap:16px}.field{margin:0}.controls h2,.controls .actions{grid-column:1/-1}canvas{height:330px}.plotpanel{padding:12px}}@media(max-width:420px){.controls{grid-template-columns:1fr}.controls h2,.controls .actions{grid-column:auto}}
+</style></head><body><main>
+<h1>Kiedy ciąg ma granicę?</h1><p class="intro">Wybierz ciąg, ustaw kandydata na granicę <b>g</b> i szerokość rury <b>ε</b>. Poszukaj takiego dużego <b>N</b>, od którego <em>wszystkie</em> wyrazy pozostają wewnątrz rury.</p>
+<div class="formula">a<sub>n</sub> → g ⇔ ∀ ε &gt; 0 ∃ N ∈ ℕ ∀ n ≥ N : |a<sub>n</sub> − g| &lt; ε</div>
+<div class="layout"><section class="controls" aria-label="Sterowanie"><h2>Eksperyment</h2>
+<div class="field"><label for="seq">Ciąg (n = 1, 2, …)</label><select id="seq"><option value="recip">aₙ = 1/n</option><option value="shift">aₙ = 2 + 1/n</option><option value="damped">aₙ = (−1)ⁿ/n</option><option value="osc">aₙ = (−1)ⁿ</option></select></div>
+<div class="field"><label for="eps">Epsilon ε <output class="value" id="ev"></output></label><input id="eps" type="range" min="-3" max="0.4771212547" step="0.001" value="-0.6989700043"><div class="small">Skala logarytmiczna: 0,001–3.</div></div>
+<div class="field"><label for="g">Kandydat g <output class="value" id="gv"></output></label><input id="g" type="range" min="-2" max="3" step="0.01" value="0"></div>
+<div class="field"><label for="N">Twój indeks N</label><input id="N" type="number" min="1" max="1000000" step="1" value="6"></div>
+<div class="field"><label for="count">Widoczne wyrazy <output class="value" id="cv"></output></label><input id="count" type="range" min="20" max="400" step="10" value="80"></div>
+<div class="actions"><button id="find" type="button">Znajdź najmniejsze N</button><p class="small">Sprawdzamy warunek dla wszystkich n ≥ N, także poza wykresem.</p></div>
+</section><section class="plotpanel"><h2 id="charttitle">Wyrazy ciągu i rura epsilonowa</h2><div class="legend"><span class="inside">● Wewnątrz: |aₙ − g| &lt; ε</span><span class="outside">× Poza lub na brzegu</span><span>│ Początek ogona: N</span></div><canvas id="plot" role="img" aria-label="Wykres ciągu z rurą epsilonową i indeksem N"></canvas><div id="status" class="status" aria-live="polite"></div><p class="small note">Przerywane brzegi g − ε i g + ε nie należą do rury. Zacieniony obszar po prawej od N oznacza badany ogon ciągu. Wykres pokazuje tylko skończony fragment.</p></section></div>
+<details open><summary>Jak przeprowadzić doświadczenie?</summary><p><b>1.</b> Dla 1/n ustaw g = 0. Zmniejszaj ε i za każdym razem znajdź N. Im węższa rura, tym później zaczyna się odpowiedni ogon.</p><p><b>2.</b> Dla (−1)ⁿ ustaw g = 0 i ε &gt; 1: cały ciąg jest w rurze. Zmniejsz ε do 1 lub mniej — żadne N już nie zadziała. Zmieniaj g: dla ε ≤ 1 żadna rura nie obejmie jednocześnie −1 i 1.</p><p><b>3.</b> Dla 1/n przesuń g poza 0. Dla szerokiej rury warunek może być spełniony, ale wystarczy odpowiednio zmniejszyć ε, żeby przestał działać.</p><p><b>Klucz:</b> jeden udany wybór ε nie dowodzi zbieżności. To samo g musi działać dla <em>każdego</em> ε &gt; 0; N może zależeć od ε. Przyjmujemy ℕ = {1, 2, …} oraz konwencję n ≥ N.</p></details>
+<p class="small">Działa offline, bez instalacji i zewnętrznych bibliotek. Plik można umieścić na stronie lub udostępnić do pobrania.</p>
+</main><script>
+'use strict';
+const $=id=>document.getElementById(id), ids=['seq','eps','g','N','count'];
+const fmt=x=>Number(x.toPrecision(5)).toLocaleString('pl-PL',{maximumFractionDigits:5});
+function state(){return {seq:$('seq').value,e:Number((10**Number($('eps').value)).toPrecision(3)),g:Number($('g').value),N:Math.max(1,Math.min(1000000,Math.floor(Number($('N').value)||1))),count:Number($('count').value)}}
+function term(n,s){return s.seq==='osc'?(n%2?-1:1):s.seq==='damped'?(n%2?-1:1)/n:(s.seq==='shift'?2:0)+1/n}
+const inside=(v,s)=>Math.abs(v-s.g)<s.e-1e-12;
+function solve(s){
+ if(s.seq==='osc')return inside(-1,s)&&inside(1,s)?1:null;
+ const L=s.seq==='shift'?2:0,d=s.g-L;
+ if(s.seq==='damped'){
+  if(s.e<=Math.abs(d)+1e-12)return null;
+ }else if(d-s.e>1e-12||d+s.e<=1e-12)return null;
+ const margin=s.seq==='damped'?s.e-Math.abs(d):d+s.e;
+ let bound=Math.ceil(1/margin)+3,last=0;
+ for(let n=1;n<=bound;n++)if(!inside(term(n,s),s))last=n;
+ return last+1;
+}
+function witness(s){if(s.seq==='osc'){let n=s.N;return inside(term(n,s),s)?n+1:n}for(let n=s.N;n<=s.N+10000;n++)if(!inside(term(n,s),s))return n;return null}
+function draw(s){const c=$('plot'),rect=c.getBoundingClientRect(),w=rect.width,h=rect.height,dpr=window.devicePixelRatio||1;c.width=w*dpr;c.height=h*dpr;const ctx=c.getContext('2d');ctx.scale(dpr,dpr);const left=52,right=w-22,top=28,bottom=h-40;let vals=[s.g-s.e,s.g+s.e];for(let n=1;n<=s.count;n++)vals.push(term(n,s));let lo=Math.min(...vals),hi=Math.max(...vals),pad=Math.max(.15,(hi-lo)*.12);lo-=pad;hi+=pad;const X=n=>left+(n-1)/(s.count-1)*(right-left),Y=v=>bottom-(v-lo)/(hi-lo)*(bottom-top);ctx.font='13px system-ui';
+ ctx.fillStyle='#edf2f8';if(s.N<=s.count)ctx.fillRect(X(s.N),top,right-X(s.N),bottom-top);
+ ctx.fillStyle='rgba(0,151,118,.11)';ctx.fillRect(left,Y(s.g+s.e),right-left,Y(s.g-s.e)-Y(s.g+s.e));
+ for(let k=0;k<=4;k++){const v=lo+(hi-lo)*k/4,y=Y(v);ctx.strokeStyle='#e2e8ef';ctx.beginPath();ctx.moveTo(left,y);ctx.lineTo(right,y);ctx.stroke();ctx.fillStyle='#486078';ctx.textAlign='right';ctx.fillText(fmt(v),left-8,y+4)}
+ const line=(v,color,dash)=>{ctx.strokeStyle=color;ctx.setLineDash(dash);ctx.beginPath();ctx.moveTo(left,Y(v));ctx.lineTo(right,Y(v));ctx.stroke();ctx.setLineDash([])};
+ line(s.g-s.e,'#408c80',[6,5]);line(s.g+s.e,'#408c80',[6,5]);line(s.g,'#235cc3',[]);
+ ctx.fillStyle='#235cc3';ctx.textAlign='right';ctx.fillText('g = '+fmt(s.g),right,Y(s.g)-6);
+ for(let n=1;n<=s.count;n++){let x=X(n),y=Y(term(n,s));if(inside(term(n,s),s)){ctx.fillStyle='#087960';ctx.beginPath();ctx.arc(x,y,3.5,0,Math.PI*2);ctx.fill()}else{ctx.strokeStyle='#bc3b39';ctx.lineWidth=1.7;ctx.beginPath();ctx.moveTo(x-3,y-3);ctx.lineTo(x+3,y+3);ctx.moveTo(x+3,y-3);ctx.lineTo(x-3,y+3);ctx.stroke();ctx.lineWidth=1}}
+ ctx.strokeStyle='#8395a8';ctx.beginPath();ctx.moveTo(left,top);ctx.lineTo(left,bottom);ctx.lineTo(right,bottom);ctx.stroke();ctx.fillStyle='#486078';ctx.textAlign='center';for(const n of [1,...[.25,.5,.75,1].map(t=>Math.round(s.count*t))])ctx.fillText(n,X(n),bottom+21);ctx.textAlign='right';ctx.fillText('n',right,h-3);ctx.textAlign='left';ctx.fillText('aₙ',5,16);
+ if(s.N<=s.count){ctx.strokeStyle='#6a4bb2';ctx.setLineDash([4,4]);ctx.beginPath();ctx.moveTo(X(s.N),top);ctx.lineTo(X(s.N),bottom);ctx.stroke();ctx.setLineDash([]);ctx.fillStyle='#6a4bb2';ctx.textAlign=s.N>s.count*.8?'right':'left';ctx.fillText('N = '+s.N,X(s.N),17)}
+}
+function update(){const s=state(),min=solve(s);$('ev').textContent=fmt(s.e);$('gv').textContent=fmt(s.g);$('cv').textContent=s.count;let msg,ok=min!==null&&s.N>=min;if(ok)msg=`<b>Warunek spełniony dla tego ε i g.</b> Dla każdego n ≥ ${s.N} mamy |aₙ − g| &lt; ${fmt(s.e)}. Najmniejszy możliwy indeks: <b>N = ${min}</b>.`;else if(min!==null)msg=`<b>To N jest za małe.</b> Potrzeba N ≥ ${min}. Wyraz a<sub>${min-1}</sub> jeszcze nie leży wewnątrz rury.`;else{const n=witness(s);msg='<b>Dla tego ε i g nie istnieje odpowiednie N.</b> '+(s.seq==='osc'?'Wartości −1 i 1 powracają nieskończenie wiele razy, a co najmniej jedna z nich nie leży wewnątrz rury.':'Dowolnie daleko pojawiają się wyrazy poza rurą lub na jej brzegu.')+(n!==null?` Dla wybranego N przykładowe naruszenie: a<sub>${n}</sub> = ${fmt(term(n,s))}.`:'')}
+ if(s.N>s.count)msg+=' Wybrane N znajduje się poza widocznym fragmentem.';
+ $('status').className='status '+(ok?'good':'bad');$('status').innerHTML=msg;draw(s)}
+ids.forEach(id=>$(id).addEventListener('input',update));$('seq').addEventListener('change',()=>{$('g').value=$('seq').value==='shift'?2:0;$('N').value=1;update()});$('find').addEventListener('click',()=>{const s=state(),min=solve(s);if(min!==null)$('N').value=min;update()});window.addEventListener('resize',update);update();
+</script></body></html>
