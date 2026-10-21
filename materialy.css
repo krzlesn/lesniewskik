@@ -51,3 +51,23 @@ h1{margin-bottom:16px}
 @media(max-width:600px){.consultations{grid-template-columns:1fr;gap:16px}.consultation-contact{border-left:0;border-top:1px solid #cbd5c8;padding:14px 0 0}}
 
 .identity{display:flex;align-items:center;gap:20px;flex-wrap:wrap}.research-link{font-size:10px;color:#68746e}.research-link:hover{text-decoration:underline}@media(max-width:600px){.identity{gap:8px 16px}.research-link{font-size:10px}}
+
+.task-sets{border-top:1px solid #e5e7df;margin-top:16px;padding-top:14px}.task-sets>summary{cursor:pointer;font-size:15px;padding:8px 0}.task-sets>summary span{margin-left:10px}.task-sets ul{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px 20px;list-style:none;padding:8px 0;margin:0}.task-sets li a{display:block;padding:9px 12px;border-radius:5px;background:#f3f5ef;text-decoration:none;font-size:13px}.task-sets li a:hover{background:#e9eee5}.task-sets li a span{float:right;margin-left:10px}@media(max-width:600px){.task-sets ul{grid-template-columns:1fr}}
+
+/* Restrained sage and sand accents. */
+:root{--accent:#3e6857;--sage:#e6ede3;--sand:#f0ebdf}
+a:hover{color:var(--accent)}
+.brand{color:var(--accent)}
+.brand span{color:#24332f}
+.consultations{background:var(--sand);border-left-color:#a18b61}
+.consultation-contact{border-color:#d9cfba}
+.contact span{background:#faf8f1;border-color:#d9cfba}
+.course-id{background:var(--sage);color:var(--accent)}
+.download,.access-controls button{background:var(--sage);color:#345444}
+.download:hover,.access-controls button:hover{background:#d9e5d5}
+.animation{background:#edf2eb}
+.animation[open]>summary{color:var(--accent)}
+.task-sets li a{background:#eef2ed}
+.task-sets li a:hover{background:#e1eadd}
+.research-link{color:#6e7868}
+@media(max-width:600px){.consultation-contact{border-top-color:#d9cfba}}
